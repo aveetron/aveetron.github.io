@@ -8,10 +8,13 @@
     max-width: 250px;
 }
 .wallpaper{
-    max-width: 350px;
-    max-width: 350px;
+    max-width: 400px;
+    max-width: 400px;
 }
 .container{
     
     background-color: #c79081;
+}
+h1{
+    text-align: center;
 }

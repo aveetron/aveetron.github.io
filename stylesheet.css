@@ -1,21 +1,27 @@
-.wallpaper{
+.wallpaper {
     height: 100%;
     width: 100%;
     align-content: center;
 }
 
-.detail{
+.detail {
     padding-top: 20px;
 }
 
-
-h1,p{
+h1,
+p {
     text-align: center;
 }
 
-body{
+body {
     background-color: whitesmoke;
+    background-image: url('assets/img/pujabg.jpg');
 }
-.makemecnter{
+
+.makemecnter {
     text-align: center;
+}
+
+.fontColor {
+    color: white;
 }

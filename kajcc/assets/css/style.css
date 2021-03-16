@@ -1,0 +1,38 @@
+.logo-image{
+    border-radius: 50%;
+    
+   
+}
+.information{
+    margin-left: 30px;
+}
+.nav-item{
+    margin-left: 40px;
+    
+}
+.navbar{
+    border: 1px solid black;
+}
+.carousel-caption{
+    opacity:0;
+    transition:500ms ease-in-out;
+  }
+.carousel-item:hover .carousel-caption{
+    opacity:1;
+}
+.carousel-image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.msg-pic{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;;
+}
+.social-icon{
+    padding: 5px ;
+
+}

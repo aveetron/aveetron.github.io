@@ -25,8 +25,8 @@
             border: none;
         }
         .image{
-            height: 170px;
-            width: 170px;
+            height: 150px;
+            width: 150px;
             align: right;
         }
 
@@ -80,32 +80,33 @@
         </div>
         
         <hr>
-        <div class="row duplicate_me">
-            <div class="col-3">Product</div>
-            <div class="col-1">Quantity</div>
-            <div class="col-1"></div>
-            <div class="col-2">Unit price</div>
-            <div class="col-3">Total</div>
-            <div class="col-1"></div>
-        </div>
+        
+        <table class="table product_table">
+            <thead>
+                <tr>
+                    <th scope="col">Product</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col"></th>
+                    <th scope="col">Unit price</th>
+                    <th scope="col">Total</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="duplicate_me">
+                    <td><input  placeholder="product name"></td>
+                    <td><input style="max-width: 200px;" placeholder="product qty" max="10"></td>
+                    <td>X</td>
+                    <td><input style="max-width: 200px;" placeholder="unit price"></td>
+                    <td><input style="max-width: 200px;" placeholder="total" align="right"></td>   
+                    <td><button class="btn btn-primary item_add">+</button></td>
+                    <td><button class="btn btn-primary item_remove">-</button></td> 
+                </tr>
+            </tbody>
+        </table>
         <br>
-        <div class="row product_list">
-            <div class="col-4">
-                <input  placeholder="product name">
-            </div>
-            <div class="col-2">
-                <input style="max-width: 200px;" placeholder="product qty" max="10">
-            </div>
-            <div class="col-1">x</div>
-            <div class="col-2">
-                <input style="max-width: 200px;" placeholder="unit price">
-            </div>
-            <div class="col-2">
-                <input style="max-width: 200px;" placeholder="total" align="right">
-            </div>
-            <div class="col-1"><button class="btn btn-primary product_add">+</button></div>
-        </div>
-
+        
 
     </div>  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
@@ -116,13 +117,25 @@
 
         $(".print").click(function(){
             $(".print").hide();
+            $(".item_add").hide();
+            $(".item_remove").hide();
             window.print();
         });
 
-        $(".product_add").click(function(){
-            console.log('avee');
-            $(".product_list").append("<div class="+'row'+'product_list+'+"><div class="+'col-4'+"><input  placeholder="+'product name'+"></div><div class="+'col-2'+"><input style="+'max-width: 200px;'+" placeholder="+'qty'+" max="+'10'+"></div></div>");
+        $new_tr = "<tr class=\"duplicate_me\"><td><input  placeholder=\"product name\"></td><td><input style=\"max-width: 200px;\" placeholder=\"product qty\" max=\"10\"></td><td>X</td><td><input style=\"max-width: 200px;\" placeholder=\"unit price\"></td><td><input style=\"max-width: 200px;\" placeholder=\"total\" align=\"right\"></td><td><button class=\"btn btn-primary item_add\">+</button></td><td><button class=\"btn btn-primary item_remove\">-</button></td></tr>"
+
+
+        
+        $("body").on("click", ".item_add", function(){
+            console.log("item added!");
+            $(".product_table tbody").append($new_tr);
         });
+        
+        $("body").on("click", ".item_remove", function(){
+            $get_row = $(this).closest("tr");
+            $get_row.remove();
+        });
+
     </script>
   </body>
 </html>

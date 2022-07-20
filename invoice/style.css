@@ -8,6 +8,7 @@
 input{
     border: None;
 }
+
 table td {
     position: relative;
   }
@@ -34,8 +35,17 @@ textarea{
     align: right;
 }
 
-hr{ border: 5px solid darkblue; }
+hr{ border: 5px solid blue; }
 
 .invoice_number_div{
     text-align: right;
+}
+
+#preview_image { 
+    height: 150px;
+    width: 150px; 
+} 
+
+.company-name, .company-address, .phone-number {
+    margin-top: 6px;
 }

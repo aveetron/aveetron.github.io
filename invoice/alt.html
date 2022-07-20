@@ -14,13 +14,12 @@
   </head>
   <body>
     <div class="container mt-5">
+        <hr>
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12" align="right">
-                <button class="btn btn-primary print mt-3 ">print invoice</button>
+                <button class="btn btn-primary print">print</button>
             </div>
         </div>
-
-        <hr>
 
         <div class="row">
             <div class="col-8" align="left">
@@ -46,15 +45,15 @@
         <div class="row">
             <div class="col-6">
                 <h4>Invoice To</h4>
-                <p><input class="input-md" placeholder="Enter Customer's Name"></p>
-                <p><textarea placeholder="Enter Customer's address "></textarea></p>
-                <p><input placeholder="Enter Customer's phone number "></p>
+                <h5><input type="text" class="input-md" placeholder="Enter Customer's Name Here" size="50"></h5>
+                <p><textarea placeholder="Enter Customer's address here"></textarea></p>
+                <p><input type="text" placeholder="Enter Customer's phone number here" size="50"></p>
             </div>
             <div class="col-6">
                 <h4>Invoice From</h4>
-                <p><input class="input-md" placeholder="Enter Company Name"></p>
-                <p><textarea placeholder="Enter company address"></textarea></p>
-                <p><input placeholder="Enter company phone"></p>
+                <h5><input type="text" class="input-md" placeholder="Enter Your Company Name here" size="50"></h5>
+                <p><textarea placeholder="Enter your company address here"></textarea></p>
+                <p><input type="text" placeholder="Enter your company phone number here" size="50"></p>
             </div>
         </div>
 
@@ -64,7 +63,7 @@
         <div class="" >
             <table class="table product_table" >
                 <thead>
-                    <tr class="target_field">
+                    <tr>
                         <th scope="col">Product</th>
                         <th scope="col">Quantity</th>
                         <th scope="col"></th>
@@ -80,7 +79,7 @@
                         <td><input placeholder="product qty" max="10" class="product_qty"></td>
                         <td>X</td>
                         <td><input placeholder="unit price" class="unit_price"></td>
-                        <td><input placeholder="total" class="sub_total" name="sub_total"></td>   
+                        <td><input placeholder="total" class="sub_total"></td>   
                         <td><button class="btn btn-primary item_add">+</button></td>
                         <td><button class="btn btn-primary item_remove">-</button></td> 
                     </tr>
@@ -94,7 +93,7 @@
                 <p>Vat/Tax :</p>
             </div>
             <div class="col-4">
-                <input type="number" class="vat khoroch" min="0">
+                <input type="number" class="vat">
             </div>
         </div>
 
@@ -103,7 +102,7 @@
                 <p>Discount :</p>
             </div>
             <div class="col-4">
-                <input type="number" class="discount khoroch" min="0">
+                <input type="number" class="discount">
             </div>
         </div>
 
@@ -112,7 +111,7 @@
                 <p>Total :</p>
             </div>
             <div class="col-4">
-                <input type="number" class="total" min="0">
+                <input type="number" class="total">
             </div>
         </div>
 
@@ -122,6 +121,5 @@
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/js/dropify.min.js" integrity="sha512-8QFTrG0oeOiyWo/VM9Y8kgxdlCryqhIxVeRpWSezdRRAvarxVtwLnGroJgnVW9/XBRduxO/z1GblzPrMQoeuew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
-    
   </body>
 </html>

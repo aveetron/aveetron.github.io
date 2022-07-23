@@ -24,7 +24,7 @@ table td input {
     border: none;
     padding: 10px;
     box-sizing: border-box;
-  }
+}
 
 textarea{
     border: none;
@@ -32,7 +32,7 @@ textarea{
 .image{
     height: 150px;
     width: 150px;
-    align: right;
+    /* align: right; */
 }
 
 hr{ border: 5px solid blue; }
@@ -48,4 +48,9 @@ hr{ border: 5px solid blue; }
 
 .company-name, .company-address, .phone-number {
     margin-top: 6px;
+}
+
+.calculation {
+    margin: auto;
+    max-width: 9rem;
 }

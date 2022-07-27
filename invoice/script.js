@@ -30,6 +30,7 @@ $(".print").click(function(){
     $(".company-name").hide();
     $(".company-address").hide();
     $(".phone-number").hide();
+    $(".calculation").css("margin-right", "50px");
     window.print();
 });
 
@@ -51,7 +52,11 @@ $("body").on("click", ".item_remove", function(){
     let total = $(".total").val();
     console.log(total, sub_total);
     $(".total").val(parseFloat(total)-parseFloat(sub_total));
-    $get_row.remove();
+    // if total row (including the tr) is greater than 2 the proceed to remove that row
+    let table_total_row = $(".product_table tr").length;
+    if(parseInt(table_total_row) > 2){
+        $get_row.remove();
+    }
 });
 
 

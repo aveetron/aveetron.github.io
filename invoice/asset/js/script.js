@@ -5,6 +5,9 @@ $("document").ready(function() {
 
 // initially total value would be 0
 let total = 0;
+$(".total").val(total);
+let total_subtotal = 0;
+$(".total-sub-total").val(total_subtotal);
 // initially total vat would be 0
 let vat = 0;
 $(".vat").val(vat);
@@ -12,8 +15,6 @@ $(".vat").val(vat);
 let discount = 0;
 $(".discount").val(discount);
 
-// principle
-// total = sum of subtotal - vat - discount
 
 
 // when print button will be clicked then pdf preview will be open and additional divs will be hidden
@@ -36,7 +37,7 @@ $(".print").click(function(){
 
 // general row consists of product, quantity, unit price, total, '+', '-' 
 // we are gonna copy this row and paste when + button is clicked
-$new_tr = "<tr class=\"duplicate_me\"><td><input  placeholder=\"product name\"></td><td><input style=\"max-width: 200px;\" placeholder=\"product qty\" class=\"product_qty\" max=\"10\"></td><td>X</td><td><input style=\"max-width: 200px;\" placeholder=\"unit price\" class=\"unit_price\"></td><td><input style=\"max-width: 200px;\" placeholder=\"total\" class=\"sub_total\" align=\"right\"></td><td><button class=\"btn btn-primary item_add\">+</button></td><td><button class=\"btn btn-primary item_remove\">-</button></td></tr>"
+$new_tr = "<tr class=\"duplicate_me\"><td><input  placeholder=\"product name\" class=\"product_name\"></td><td><input style=\"max-width: 200px;\" placeholder=\"product qty\" class=\"product_qty\" max=\"10\"></td><td>X</td><td><input style=\"max-width: 200px;\" placeholder=\"unit price\" class=\"unit_price\"></td><td><input style=\"max-width: 200px;\" placeholder=\"total\" class=\"sub_total\" align=\"right\"></td><td><button class=\"btn btn-primary item_add\">+</button></td><td><button class=\"btn btn-primary item_remove\">-</button></td></tr>"
 
 
 // when '+' button '/' item_add button clicked then it'll copy the next_tr
@@ -48,13 +49,28 @@ $("body").on("click", ".item_add", function(){
 // when '-' button is clicked then get the tr and remove this one
 $("body").on("click", ".item_remove", function(){
     $get_row = $(this).closest("tr");
+    // get row's sub total
     let sub_total = $get_row.find(".sub_total").val();
+    // get total field value
     let total = $(".total").val();
-    console.log(total, sub_total);
-    $(".total").val(parseFloat(total)-parseFloat(sub_total));
-    // if total row (including the tr) is greater than 2 the proceed to remove that row
+    // get sub total field's value
+    let total_subtotal = $(".total-sub-total").val();
+    // if row removes then deduct from total and sub-total
+    // checking total and sub-total is greater than zero or not if zero then will not deduct, otherwise minus value will
+    if(total > 0 && sub_total > 0){
+        $(".total").val(parseFloat(total)-parseFloat(sub_total));
+    }
+    if(total_subtotal > 0 && sub_total > 0){
+        $(".total-sub-total").val(parseFloat(total_subtotal)-parseFloat(sub_total));
+    }
     let table_total_row = $(".product_table tr").length;
+    // if table's total row is 2 then set null to all row value
+    if(parseInt(table_total_row) == 2){
+        $get_row.find(".product_name, .product_qty, .unit_price, .sub_total").val("");
+    }
+    // if total row (including the first tr) is greater than 2 the proceed to remove that row
     if(parseInt(table_total_row) > 2){
+        // remove row
         $get_row.remove();
     }
 });
@@ -78,7 +94,6 @@ $(function() {
             if(!isNaN(subtotal)){
                 total+=subtotal;
             }
-            console.log(total)
         });
         $(".total-sub-total").val(total);
         // adding also in the total field
@@ -131,14 +146,14 @@ $("body").on("keyup", ".vat, .discount", function(){
     let total_sub_total = $(".total-sub-total").val();
     let vat = $(".vat").val();
     let discount = $(".discount").val();
-    console.log(total_sub_total, vat, discount)
-    if(typeof parseFloat(vat) == "number"){
+
+    if(vat.length > 0){
         total_sub_total = parseFloat(total_sub_total) + parseFloat(total_sub_total) * (parseFloat(vat)/100);
         $(".total").val(total_sub_total);
     }
-
-    if(typeof parseFloat(discount) == "number"){
+    if(discount.length > 0){
         total_sub_total = parseFloat(total_sub_total) - parseFloat(discount);
         $(".total").val(total_sub_total);
     }
+    
 });

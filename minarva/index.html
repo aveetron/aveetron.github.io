@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>মিনার্ভা পূজা পরিষদ</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Custom Google font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <script>
+            // Set the date we're counting down to
+            var countDownDate = new Date("Oct 24, 2023 00:00:00").getTime();
+            
+            // Update the count down every 1 second
+            var x = setInterval(function() {
+            
+              // Get today's date and time
+              var now = new Date().getTime();
+            
+              // Find the distance between now and the count down date
+              var distance = countDownDate - now;
+            
+              // Time calculations for days, hours, minutes and seconds
+              var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+              var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+              var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+              // Display the result in the element with id="demo"
+              document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+              + minutes + "m " + seconds + "s ";
+            
+              // If the count down is finished, write some text
+              if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+              }
+            }, 1000);
+        </script>
+    </head>
+    <body class="d-flex flex-column h-100">
+        <main class="flex-shrink-0">
+            <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+                <div class="container px-5">
+                    <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">মিনার্ভা পূজা পরিষদ</span></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                            <li class="nav-item"><a class="nav-link" href="#plan">পরিকল্পনা</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Header-->
+            <header class="py-5">
+                <div class="container px-5 pb-5">
+                    <div class="row gx-5 align-items-center">
+                        <div class="col-md-5">
+                            <!-- Header text content-->
+                            <div class="text-center text-xxl-start">
+                                <div class="fs-3 fw-light text-muted">অপেক্ষার</div>
+                                <h5 class="display-3 fw-bolder mb-5"><p id="demo"></p></h5>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <!-- Header profile picture-->
+                            <div class="d-flex justify-content-center mt-5 mt-xxl-0">
+                                <div class="profile bg-gradient-primary-to-secondary">
+                                    <!-- TIP: For best results, use a photo with a transparent background like the demo example below-->
+                                    <!-- Watch a tutorial on how to do this on YouTube (link)-->
+                                    <img class="profile-img" src="assets/durga.jpeg" alt="..." />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- About Section-->
+            <section class="bg-light py-5" id="plan">
+                <div class="container px-5">
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-md-12">
+                            <div class="text-center my-5">
+                                <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">শতবর্ষ উৎযাপনে পরিকল্পনা সমূহ</span></h2><br>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>পরিকল্পনা</th>
+                                                <th>পরিকল্পনাকারী</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>সিনিয়র যারা আছেন তাদের কাছ থেকে মিনার্ভা অতীত ইতিহাস সংগ্রহ ইত্যাদি। </td>
+                                                <td>বিপ্লব চক্রবর্তী</td>
+                                            </tr>
+                                            <tr>
+                                                <td>নবমী পূজায় রাতে মহালয়া  মঞ্চস্থ করা, চন্ডি পাঠ</td>
+                                                <td>সিংকু কর্মকার</td>
+                                            </tr>
+                                            <tr>
+                                                <td>নবমী রাতে আরতি প্রতিযোগিতা</td>
+                                                <td>উদয়ন চক্রবর্তী, প্রশান্ত চক্রবর্তী, অয়ন চক্রবর্তী</td>
+                                            </tr>
+                                            <tr>
+                                                <td>বাচ্চাদের চিত্রাংকন প্রতিযোগিতা, সেই ছবি গুলা মন্দিরের পাশের ঘরের দেয়ালে শো করা যায়</td>
+                                                <td>অভী চক্রবর্তী</td>
+                                            </tr>
+                                            <tr>
+                                                <td>শতবর্ষে মিনার্ভার সাথে যুক্ত সিনিয়র জীবিত ও মরণোত্তর ক্রেস্ট দেওয়া যেতে পারে।</td>
+                                                <td>সিংকু কর্মকার</td>
+                                            </tr>
+                                            <tr>
+                                                <td>আমাদের শ্রদ্ধেয় গুরুজন যারা আছেন, তাদের স্মৃতিচারণ নিয়ে বক্তব্য অনুষ্ঠান  এবং ম্যাগাজিন ও তৈরি করা যায়।</td>
+                                                <td>অয়ন চক্রবর্তী</td>
+                                            </tr>
+                                            <tr>
+                                                <td>সর্ব সম্মতিক্রমে প্রথম কাজ শতবর্ষ উদযাপন কমিটি ঘোষণা করা।  শতবর্ষ উদযাপনের প্রথমশর্ত যা সবার কাজের গতি অনেক গুন বৃদ্ধি পাবে।</td>
+                                                <td>সিংকু কর্মকার</td>
+                                            </tr>
+                                            <tr>
+                                                <td>জাতীয় মানের ধর্মীয় ভজন গানের ১/২ জন শিল্পী আনা যায় যারা পাবলিক ফিগার সেখানে মিউজিসিয়ান সাপোর্ট টোটালটা আমার গ্রুপ থাকবে, সেটাও কনসিডারেই। </td>
+                                                <td>শুভ্র রক্ষিত</td>
+                                            </tr>
+                                            <tr>
+                                                <td>আমাদের পূজা কমিটির সাবেক বা বর্তমান শিল্পী যারা আছে বা তাদের পরিবারের কেউ তাদেরকে নিয়ে সাংস্কৃতিক পরিবেশনার প্রাধান্য থাকবে বা থাকা উচিৎ। তবে সব পরিবেশনাই যেনো ধর্মীয় আঙ্গিকের বাহিরে না হয় সেটা আমার অনুরোধ। আর উৎসব প্রাঙ্গণের সাজসজ্জাও হতে হবে পূজামণ্ডপ কেন্দ্রিক। আর সাজসজ্জা তে আল্পনা ও মুরাল চিত্রে আমার সহযোগিতা ও কাজ থাকবে ১০০%.</td>
+                                                <td>শুভ্র রক্ষিত</td>
+                                            </tr>
+                                            <tr>
+                                                <td>লোকেশন টা গুরুত্বপূর্ণ।  পুজার নিয়ম কাজ গুলো বর্তমান মন্দিরে করে, আলাদা কোন স্থান যেমন মুখার্জি ঘাটলা বা সংলগ্ন এলাকায় বাদ বাকি আনুষ্ঠানিকতা গুলো করা গেলে ভাল হয়।</td>
+                                                <td>অয়ন চক্রবর্তী</td>
+                                            </tr>
+                                            <tr>
+                                                <td>মিনার্ভার ইতিহাস নিয়ে একটা ডকুমেন্টরি যেখানে আমাদের সম্মানীত প্রবীণ সদস্যদের স্মৃতিচারণ থাকবে।</td>
+                                                <td>অভী চক্রবর্তী</td>
+                                            </tr>
+                                            <tr>
+                                                <td>পূজা মাহাত্ম্যর জ্ঞান প্রদান করা। 
+                                                    আমরা পূজা অর্চনা করি মাকে ভক্তি করার জন্য। কিন্তু আমরা কেউই জানি না কোন পুজা কেন করি বা তার কারণ কি। উদাহরণ - মায়ের প্রাণ প্রতিষ্ঠা কেন করা হয়? নতুন প্রজন্মের জন্য এটা জানা আবশ্যক পুজার নিয়ম এবং পুজোর মাহাত্ম্য।
+                                                    পুজা চলাকালীন দিনে আমার বিশেষ অনুরোধ পুজা মাহাত্ম্য,  রামায়ণ, মহাভারতের কাহিনী, গীতার  সারকথা অথবা মহালয়ার কাহিনী পাঠ করা হোক।
+                                                    </td>
+                                                <td>পৃথাকন্যা পোদ্দার</td>
+                                            </tr>
+                                            <tr>
+                                                <td>মায়ের বস্র-অলংকারের প্রতি বিশেষ দৃষ্টি আকর্ষণ যেন করা হয়। গত বছর মায়ের শূন্য গলা ছিল শেষ মুহুর্তে অনেক খুঁজে জোগাড় করা হয়। এতো আলোকসজ্জা করে কি লাভ যদি মাকে মন মতো না সাজাই। </td>
+                                                <td>পৃথাকন্যা পোদ্দার</td>
+                                            </tr>
+                                            <tr>
+                                                <td>পুজোর দুইদিন ধুনুচি নাচের আমন্ত্রণ জানানো হোক সবাইকে। ঢাকের প্রতি বেশি নজর দেয়া হোক।</td>
+                                                <td>পৃথাকন্যা পোদ্দার</td>
+                                            </tr>
+                                            <tr>
+                                                <td>৩ দিন গত বছরের মতো এবারও ভোগের আয়োজন করা হোক।</td>
+                                                <td>পৃথাকন্যা পোদ্দার</td>
+                                            </tr>
+                                            <tr>
+                                                <td>এবার নতুন হিসেবে দুই তিনটে food stall পাশে বাসানো যায় মিনার্ভা ব্যনারে।  ( ফুচকা, চা,মুড়ি)  
+                                                    *self payment not for free. </td>
+                                                <td>পৃথাকন্যা পোদ্দার</td>
+                                            </tr>
+                                            <tr>
+                                                <td>পুজার জন্য স্থায়ী কোন ফান্ডের ব্যবস্থা করা,যেটা হয়তো মন্দিরের উন্নয়ন, গরীব সনাতনীদের বাচ্চাদের পড়াশোনা, চিকিৎসায় ব্যয় করা যেতে পারে। এছাড়া আমাদের কোন স্থায়ী মন্দির নেই,যদি অদূরে আমাদের স্থায়ী  মন্দির করার চিন্তাভাব না থাকে তবে এই ব্যাপারে সকলে ভেবে দেখতে পারেন।</td>
+                                                <td>তন্ময় ভৌমিক</td>
+                                            </tr>
+                                            <tr>
+                                                <td>আমাদের পূজার সাথে জড়িত সকলকে ইনভাইটেশন দেওয়া,যারা হয়তো এখনো আছে।প্রতিটি মিটিং সমন্ধে আগেই মেসেজ দিয়ে নোটিফাই করা।</td>
+                                                <td>তন্ময় ভৌমিক</td>
+                                            </tr>
+                                            <tr>
+                                                <td>পুজায় চণ্ডীপাঠ, ঢাক, চিত্রাংকন,সংগীত, নাচ, উলুধ্বনি, শঁাখ প্রতিযোগিতার আয়োজন করা। মূলকথা, যা কিছু সনাতনী ও বাংালী আনার সাথে যায়, যথা সম্ভব নিশ্চিত করা।</td>
+                                                <td>তন্ময় ভৌমিক</td>
+                                            </tr>
+                                            <tr>
+                                                <td>মায়ের পুজায় সাত্ত্বিকতা নিশ্চিত করা।পুজার ভোগ প্রসাদের ব্যবস্থা রাখা।সম্ভব হলে ভোগপ্রসাদ বাসায় বাসায় পৌঁছে দেবার ব্যবস্থা করা।</td>
+                                                <td>তন্ময় ভৌমিক</td>
+                                            </tr>
+                                            <tr>
+                                                <td>অনেকেই বড় গুরুজন আছে,তাদের  ধন্যবাদ দিয়ে সাময়িকী, ক্রোড়পত্র প্রকাশ করা।
+                                                    আমাদের পরের প্রজন্ম থেকে, বিশেষ করে ছোট দের অংশগ্রহণ নিয়ে চিন্তা ভাবনা করা।</td>
+                                                <td>তন্ময় ভৌমিক</td>
+                                            </tr>
+                                            <tr>
+                                                <td>মায়ের মন্দিরে কেন্দ্রিক শুধু পুজার সময়টুকু নয়, বছরের অন্যান্য পুজাগুলোও সল্পপরিসরে পালন করা যায় কিনা ভেবে দেখা যেতে পারে।যেমন - শনিপুজা, গীতাপাঠ,ভগবতপাঠ বা অন্যান্য।</td>
+                                                <td>তন্ময় ভৌমিক</td>
+                                            </tr>
+                                            <tr>
+                                                <td>আপনার মূল্যবান পরিকল্পনা গ্রুপে শেয়ার করুন</td>
+                                                <td>আপনি</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer-->
+        <footer class="bg-white py-4 mt-auto">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto"><div class="small m-0">Copyright &copy; Your Website 2023</div></div>
+                    <div class="col-auto">
+                        <a class="small" href="#!">Privacy</a>
+                        <span class="mx-1">&middot;</span>
+                        <a class="small" href="#!">Terms</a>
+                        <span class="mx-1">&middot;</span>
+                        <a class="small" href="#!">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script>
+            // Set the date we're counting down to
+            var countDownDate = new Date("Oct 24, 2023 00:00:").getTime();
+            
+            // Update the count down every 1 second
+            var x = setInterval(function() {
+            
+              // Get today's date and time
+              var now = new Date().getTime();
+            
+              // Find the distance between now and the count down date
+              var distance = countDownDate - now;
+            
+              // Time calculations for days, hours, minutes and seconds
+              var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+              var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+              var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+              // Display the result in the element with id="demo"
+              document.getElementById("demo").innerHTML = days + "দিন " + hours + "ঘণ্টা "
+              + minutes + "মিনিট " + seconds + "সেকেন্ড ";
+            
+              // If the count down is finished, write some text
+              if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+              }
+            }, 1000);
+            </script>
+        
+    </body>
+</html>
